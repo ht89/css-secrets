@@ -1,0 +1,12 @@
+.bg-position {
+    width: 400px;
+    height: 200px;
+    // define bottom right below as a fallback for old browsers
+    background: #5C9ABE url('http://csssecrets.io/images/code-pirate.svg') no-repeat bottom right;
+    background-position: bottom 20px right 10px;
+    background-size: 100px;
+    h4 {
+        padding: 30px 20px;
+        color: #fff;
+    }
+}

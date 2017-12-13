@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CodingTipsComponent } from './coding-tips/coding-tips.component';
 import { BordersComponent } from './borders/borders.component';
+import { BackgroundsComponent } from './backgrounds/backgrounds.component';
 
 const ROUTES: Routes = [
     {
@@ -15,6 +16,10 @@ const ROUTES: Routes = [
     {
         path: 'borders',
         component: BordersComponent
+    },
+    {
+        path: 'backgrounds',
+        component: BackgroundsComponent
     }
 ]
 
@@ -22,7 +27,8 @@ const ROUTES: Routes = [
   declarations: [
     AppComponent,
     CodingTipsComponent,
-    BordersComponent
+    BordersComponent,
+    BackgroundsComponent
   ],
   imports: [
     BrowserModule,
