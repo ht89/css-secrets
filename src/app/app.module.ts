@@ -8,6 +8,7 @@ import { CodingTipsComponent } from './coding-tips/coding-tips.component';
 import { BordersComponent } from './borders/borders.component';
 import { BackgroundsComponent } from './backgrounds/backgrounds.component';
 import { InnerRoundingComponent } from './inner-rounding/inner-rounding.component';
+import { StripedBackgroundsComponent } from './striped-backgrounds/striped-backgrounds.component';
 
 const ROUTES: Routes = [
     {
@@ -25,6 +26,10 @@ const ROUTES: Routes = [
     {
         path: 'inner-rounding',
         component: InnerRoundingComponent
+    },
+    {
+        path: 'striped-bg',
+        component: StripedBackgroundsComponent
     }
 ]
 
@@ -34,7 +39,8 @@ const ROUTES: Routes = [
         CodingTipsComponent,
         BordersComponent,
         BackgroundsComponent,
-        InnerRoundingComponent
+        InnerRoundingComponent,
+        StripedBackgroundsComponent
     ],
     imports: [
         BrowserModule,
