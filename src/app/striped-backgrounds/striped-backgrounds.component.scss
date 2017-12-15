@@ -27,5 +27,6 @@
     “If a color stop has a position that is less than the specified position of any color stop before it in the list, set its position to be equal to the largest specified position of any color stop before it.” 
     */
     background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0); // to bottom by default
-    background-size: 42.426406871px 42.426406871px;
+    // rounded result of 2 x 15 x sqrt(2) (15 is the length of a right triangle leg)
+    background-size: 42.4px 42.4px;
 }
