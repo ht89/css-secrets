@@ -18,3 +18,14 @@
     background: linear-gradient(to right, #fb3 50%, #58a 0); // to bottom by default
     background-size: 30px 100%;
 }
+
+.diagonal-striped-bg {
+    margin-top: 30px;
+    width: 300px;
+    height: 150px;
+    /* 
+    “If a color stop has a position that is less than the specified position of any color stop before it in the list, set its position to be equal to the largest specified position of any color stop before it.” 
+    */
+    background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0); // to bottom by default
+    background-size: 42.426406871px 42.426406871px;
+}
