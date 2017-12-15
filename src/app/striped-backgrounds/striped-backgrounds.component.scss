@@ -31,3 +31,13 @@
     // rounded result of 2 x 15 x sqrt(2) (15 is the length of a right triangle leg)
     background-size: 42.4px 42.4px;
 }
+
+.repeating-diagonal-striped-bg {
+    margin-top: 30px;
+    width: 300px;
+    height: 150px;
+    /* 
+        better than linear-gradient since it's possible to change the angle without visual distortions & reduce repitions
+    */
+    background: repeating-linear-gradient(60deg, #fb3, #fb3 15px, #58a 0, #58a 30px); // to bottom by default
+}
