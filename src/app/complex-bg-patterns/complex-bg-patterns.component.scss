@@ -32,10 +32,19 @@ div {
     “If a color stop has a position that is less than the specified position of any color stop before it in the list, set its position to be equal to the largest specified position of any color stop before it.” 
     */
     background: #58a;
-    background-image: 
-        linear-gradient(white 2px, transparent 0),
-        linear-gradient(90deg, white 2px, transparent 0),
-        linear-gradient(hsla(0, 0%, 100%, .3) 1px, transparent 0),
-        linear-gradient(90deg, hsla(0, 0%, 100%, .3) 1px, transparent 0);
+    background-image: linear-gradient(white 2px, transparent 0), linear-gradient(90deg, white 2px, transparent 0), linear-gradient(hsla(0, 0%, 100%, .3) 1px, transparent 0), linear-gradient(90deg, hsla(0, 0%, 100%, .3) 1px, transparent 0);
     background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
+}
+
+@mixin polka($size, $dot, $base, $accent) {
+    background: $base;
+    background-image: radial-gradient($accent $dot, transparent 0), radial-gradient($accent $dot, transparent 0);
+    background-size: $size $size;
+    background-position: 0 0, $size / 2 $size / 2;
+}
+
+.polka-dot {
+    width: 300px;
+    height: 150px;
+    @include polka(30px, 30%, #655, tan);
 }
