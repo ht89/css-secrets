@@ -9,6 +9,7 @@ import { BordersComponent } from './borders/borders.component';
 import { BackgroundsComponent } from './backgrounds/backgrounds.component';
 import { InnerRoundingComponent } from './inner-rounding/inner-rounding.component';
 import { StripedBackgroundsComponent } from './striped-backgrounds/striped-backgrounds.component';
+import { ComplexBgPatternsComponent } from './complex-bg-patterns/complex-bg-patterns.component';
 
 const ROUTES: Routes = [
     {
@@ -30,6 +31,10 @@ const ROUTES: Routes = [
     {
         path: 'striped-bg',
         component: StripedBackgroundsComponent
+    },
+    {
+        path: 'complex-bg',
+        component: ComplexBgPatternsComponent
     }
 ]
 
@@ -40,7 +45,8 @@ const ROUTES: Routes = [
         BordersComponent,
         BackgroundsComponent,
         InnerRoundingComponent,
-        StripedBackgroundsComponent
+        StripedBackgroundsComponent,
+        ComplexBgPatternsComponent
     ],
     imports: [
         BrowserModule,
