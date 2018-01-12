@@ -1,0 +1,15 @@
+.something-meaningful {
+    width: 300px;
+    padding: 1rem;
+    border: 1rem solid transparent;
+    background: linear-gradient(white, white), url('../../assets/img/img.png');
+    background-size: cover;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+}
+
+.envelope-themed-border {
+    padding: 1rem;
+    border: 1rem solid transparent;
+    background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 0, transparent 25%, #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0 / 5rem 5rem;
+}

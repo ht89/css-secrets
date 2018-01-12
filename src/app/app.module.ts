@@ -10,6 +10,8 @@ import { BackgroundsComponent } from './backgrounds/backgrounds.component';
 import { InnerRoundingComponent } from './inner-rounding/inner-rounding.component';
 import { StripedBackgroundsComponent } from './striped-backgrounds/striped-backgrounds.component';
 import { ComplexBgPatternsComponent } from './complex-bg-patterns/complex-bg-patterns.component';
+import { RandomBackgroundsComponent } from './random-backgrounds/random-backgrounds.component';
+import { ImgBordersComponent } from './img-borders/img-borders.component';
 
 const ROUTES: Routes = [
     {
@@ -35,6 +37,14 @@ const ROUTES: Routes = [
     {
         path: 'complex-bg',
         component: ComplexBgPatternsComponent
+    },
+    {
+        path: 'random-bg',
+        component: RandomBackgroundsComponent
+    },
+    {
+        path: 'img-border',
+        component: ImgBordersComponent
     }
 ]
 
@@ -46,7 +56,9 @@ const ROUTES: Routes = [
         BackgroundsComponent,
         InnerRoundingComponent,
         StripedBackgroundsComponent,
-        ComplexBgPatternsComponent
+        ComplexBgPatternsComponent,
+        RandomBackgroundsComponent,
+        ImgBordersComponent
     ],
     imports: [
         BrowserModule,
