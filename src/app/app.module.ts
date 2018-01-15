@@ -12,6 +12,7 @@ import { StripedBackgroundsComponent } from './striped-backgrounds/striped-backg
 import { ComplexBgPatternsComponent } from './complex-bg-patterns/complex-bg-patterns.component';
 import { RandomBackgroundsComponent } from './random-backgrounds/random-backgrounds.component';
 import { ImgBordersComponent } from './img-borders/img-borders.component';
+import { FlexibleEllipsesComponent } from './flexible-ellipses/flexible-ellipses.component';
 
 const ROUTES: Routes = [
     {
@@ -45,6 +46,10 @@ const ROUTES: Routes = [
     {
         path: 'img-border',
         component: ImgBordersComponent
+    },
+    {
+        path: 'flexible-ellipses',
+        component: FlexibleEllipsesComponent
     }
 ]
 
@@ -58,7 +63,8 @@ const ROUTES: Routes = [
         StripedBackgroundsComponent,
         ComplexBgPatternsComponent,
         RandomBackgroundsComponent,
-        ImgBordersComponent
+        ImgBordersComponent,
+        FlexibleEllipsesComponent
     ],
     imports: [
         BrowserModule,
