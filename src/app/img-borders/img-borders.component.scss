@@ -28,3 +28,9 @@
         background-position: 100%;
     }
 }
+
+.footnote {
+    margin-top: 30px;
+    border-top: 5px solid transparent;
+    border-image: 100% 0 0 linear-gradient(90deg, black 4rem, transparent 0);
+}
