@@ -1,0 +1,20 @@
+button {
+    padding: 10px 15px;
+    border: 0;
+    position: relative;
+    background-color: transparent;
+    color: #fff;
+    &:before {
+        content: '';
+        position: absolute;
+        // these ensure the pseudo-element stretches to the size of its parent
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #58a;
+        // need this since the pseudo element is above the parent by default
+        z-index: -1;
+        transform: skewX(-45deg);
+    }
+}

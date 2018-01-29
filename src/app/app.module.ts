@@ -13,6 +13,7 @@ import { ComplexBgPatternsComponent } from './complex-bg-patterns/complex-bg-pat
 import { RandomBackgroundsComponent } from './random-backgrounds/random-backgrounds.component';
 import { ImgBordersComponent } from './img-borders/img-borders.component';
 import { FlexibleEllipsesComponent } from './flexible-ellipses/flexible-ellipses.component';
+import { ParallelogramsComponent } from './parallelograms/parallelograms.component';
 
 const ROUTES: Routes = [
     {
@@ -50,6 +51,10 @@ const ROUTES: Routes = [
     {
         path: 'flexible-ellipses',
         component: FlexibleEllipsesComponent
+    },
+    {
+        path: 'parallelograms',
+        component: ParallelogramsComponent
     }
 ]
 
@@ -64,7 +69,8 @@ const ROUTES: Routes = [
         ComplexBgPatternsComponent,
         RandomBackgroundsComponent,
         ImgBordersComponent,
-        FlexibleEllipsesComponent
+        FlexibleEllipsesComponent,
+        ParallelogramsComponent
     ],
     imports: [
         BrowserModule,
