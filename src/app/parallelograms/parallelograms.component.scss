@@ -40,3 +40,17 @@ button {
     height: 100px;
     @include bevelled-corners(#58a, 15px, 5px);
 }
+
+@mixin curved-bevelled-corners($bg, $tl:0, $tr:$tl, $br:$tl, $bl: $tr) {
+    background-color: $bg;
+    background: radial-gradient(circle at top left, transparent $tl, $bg 0) top left, radial-gradient(circle at top right, transparent $tr, $bg 0) top right, radial-gradient(circle at bottom right, transparent $br, $bg 0) bottom right, radial-gradient(circle at bottom left, transparent $bl, $bg 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.curved-cutout-corners {
+    margin-top: 30px;
+    width: 150px;
+    height: 100px;
+    @include curved-bevelled-corners(#58a, 14px);
+}
