@@ -6,15 +6,33 @@ button {
     color: #fff;
     &:before {
         content: '';
-        position: absolute;
-        // these ensure the pseudo-element stretches to the size of its parent
+        position: absolute; // these ensure the pseudo-element stretches to the size of its parent
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: #58a;
-        // need this since the pseudo element is above the parent by default
+        background-color: #58a; // need this since the pseudo element is above the parent by default
         z-index: -1;
         transform: skewX(-45deg);
     }
+}
+
+.cutout-corners {
+    margin-top: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: #58a;
+    background: linear-gradient(-45deg, transparent 15px, #58a 0) right, linear-gradient(45deg, transparent 15px, #655 0) left;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.four-cutout-corners {
+    margin-top: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: #58a;
+    background: linear-gradient(135deg, transparent 15px, #58a 0) top left, linear-gradient(-135deg, transparent 15px, #655 0) top right, linear-gradient(-45deg, transparent 15px, #58a 0) bottom right, linear-gradient(45deg, transparent 15px, #655 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
 }
