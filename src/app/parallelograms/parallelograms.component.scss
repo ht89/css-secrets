@@ -4,6 +4,7 @@ button {
     position: relative;
     background-color: transparent;
     color: #fff;
+    /* use pseudo-element so that the tranformations will not affect the text  */
     &:before {
         content: '';
         position: absolute; // these ensure the pseudo-element stretches to the size of its parent
@@ -53,4 +54,61 @@ button {
     width: 150px;
     height: 100px;
     @include curved-bevelled-corners(#58a, 14px);
+}
+
+.cutout-corners-using-clip-path {
+    margin-top: 30px;
+    width: 150px;
+    height: 100px;
+    background: #58a;
+    clip-path: polygon( 20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
+}
+
+.trapezoid {
+    margin-top: 30px;
+    display: inline-block;
+    padding: .5rem 1rem .35rem;
+    color: #fff;
+    position: relative;
+    /* use pseudo-element so that the tranformations will not affect the text  */
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        background-color: #58a;
+        transform: perspective(.5rem) rotateX(5deg) scaleY(1.3); // scale makes up for the lost height due to rotation
+        transform-origin: bottom; // make the element position fixed when rotating it. Otherwise, its width will be larger & its top decreases
+    }
+}
+
+.nav {
+    margin-top: 30px;
+    nav > a {
+        position: relative;
+        display: inline-block;
+        padding: .3rem 1rem 0;
+        text-decoration: none;
+        color: #000;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: #ccc;
+            background-image: linear-gradient(hsla(0, 0%, 100%, .6), hsla(0, 0%, 100%, 0));
+            border: 1px solid rgba(0, 0, 0, .4);
+            border-bottom: 0;
+            border-radius: .5rem .5rem 0 0;
+            box-shadow: 0 .15rem white inset;
+            transform: perspective(.5rem) rotateX(5deg);
+            transform-origin: bottom left; // use 'bottom left' or 'bottom right' for left/right slanted tabs
+        }
+    }
 }
