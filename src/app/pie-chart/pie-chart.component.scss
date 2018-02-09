@@ -1,0 +1,83 @@
+div:not(:first-child) {
+    margin-top: 30px;
+}
+
+.pie {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    background-image: linear-gradient(to right, transparent 50%, #655 0);
+    &:before {
+        content: '';
+        display: block;
+        margin-left: 50%;
+        height: 100%;
+        border-radius: 0 100% 100% 0 / 50%;
+        /* 
+            use 'inherit' to show the 0 - 50%
+            use #655 to show the 60% - 100%
+        */
+        background-color: #655;
+        transform-origin: left;
+        /* 
+            .1turn = 10%
+            when changing the background-color from inherit to #655, use 0 to .5turn to show 50% - 100%
+        */
+        transform: rotate(.1turn);
+    }
+}
+
+.pie-w-animation {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    background-image: linear-gradient(to right, transparent 50%, #655 0);
+    &:before {
+        content: '';
+        display: block;
+        margin-left: 50%;
+        height: 100%;
+        border-radius: 0 100% 100% 0 / 50%;
+        background-color: inherit;
+        transform-origin: left;
+        animation: spin 3s linear infinite, bg 6s step-end infinite;
+    }
+}
+
+.pie-w-animation-delay {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    background-image: linear-gradient(to right, transparent 50%, #655 0);
+    &:before {
+        content: '';
+        display: block;
+        margin-left: 50%;
+        height: 100%;
+        border-radius: 0 100% 100% 0 / 50%;
+        /* 
+            use 'inherit' to show the 0 - 50%
+            use #655 to show the 60% - 100%
+        */
+        background-color: inherit;
+        transform-origin: left;
+        animation: spin 50s linear infinite, bg 100s step-end infinite;
+        animation-play-state: paused;
+        animation-delay: inherit;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(.5turn);
+    }
+}
+
+@keyframes bg {
+    50% {
+        background-color: #655;
+    }
+}

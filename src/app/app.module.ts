@@ -14,6 +14,7 @@ import { RandomBackgroundsComponent } from './random-backgrounds/random-backgrou
 import { ImgBordersComponent } from './img-borders/img-borders.component';
 import { FlexibleEllipsesComponent } from './flexible-ellipses/flexible-ellipses.component';
 import { ParallelogramsComponent } from './parallelograms/parallelograms.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
 
 const ROUTES: Routes = [
     {
@@ -55,6 +56,10 @@ const ROUTES: Routes = [
     {
         path: 'parallelograms',
         component: ParallelogramsComponent
+    },
+    {
+        path: 'pie-chart',
+        component: PieChartComponent
     }
 ]
 
@@ -70,7 +75,8 @@ const ROUTES: Routes = [
         RandomBackgroundsComponent,
         ImgBordersComponent,
         FlexibleEllipsesComponent,
-        ParallelogramsComponent
+        ParallelogramsComponent,
+        PieChartComponent
     ],
     imports: [
         BrowserModule,
