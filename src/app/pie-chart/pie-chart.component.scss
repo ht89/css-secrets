@@ -1,4 +1,4 @@
-div:not(:first-child) {
+div:not(:first-child), svg {
     margin-top: 30px;
 }
 
@@ -58,14 +58,12 @@ div:not(:first-child) {
         margin-left: 50%;
         height: 100%;
         border-radius: 0 100% 100% 0 / 50%;
-        /* 
-            use 'inherit' to show the 0 - 50%
-            use #655 to show the 60% - 100%
-        */
         background-color: inherit;
         transform-origin: left;
+        // use 100s for simplification. an animation-delay of -20s displays the 20% percentage
         animation: spin 50s linear infinite, bg 100s step-end infinite;
         animation-play-state: paused;
+        /* inherit from the element inline style */
         animation-delay: inherit;
     }
 }
@@ -80,4 +78,20 @@ div:not(:first-child) {
     50% {
         background-color: #655;
     }
+}
+
+svg {
+    transform: rotate(-90deg);
+    background: yellowgreen;
+    border-radius: 50%;
+}
+
+circle {
+    fill: yellowgreen;
+    stroke: #655;
+    stroke-width: 50;
+    /* 
+        158 = circumference of the circle = 2r x pi
+    */
+    stroke-dasharray: 40 158; // dash length, dash gap
 }
