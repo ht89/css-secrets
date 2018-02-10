@@ -81,6 +81,8 @@ div:not(:first-child), svg {
 }
 
 svg {
+    width: 200px;
+    height: 200px;
     transform: rotate(-90deg);
     background: yellowgreen;
     border-radius: 50%;
@@ -89,9 +91,14 @@ svg {
 circle {
     fill: yellowgreen;
     stroke: #655;
-    stroke-width: 50;
-    /* 
-        158 = circumference of the circle = 2r x pi
-    */
-    stroke-dasharray: 40 158; // dash length, dash gap
+    stroke-width: 32;
+    /* 38 for 38% */
+    stroke-dasharray: 38 100; // dash length, dash gap
+    animation: fillup 5s linear infinite;
+}
+
+@keyframes fillup {
+    to {
+        stroke-dasharray: 100 100;
+    }
 }
