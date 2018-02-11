@@ -1,0 +1,9 @@
+.shadow {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    /* 
+        if the blur radius equals the spread radius, they will cancel each other out and therefore, the shadow dimensions equals the element dimensions
+    */
+    box-shadow: 0 5px 4px -4px rgba(0, 0, 0, .5);
+}

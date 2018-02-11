@@ -15,6 +15,7 @@ import { ImgBordersComponent } from './img-borders/img-borders.component';
 import { FlexibleEllipsesComponent } from './flexible-ellipses/flexible-ellipses.component';
 import { ParallelogramsComponent } from './parallelograms/parallelograms.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { VisualEffectsComponent } from './visual-effects/visual-effects.component';
 
 const ROUTES: Routes = [
     {
@@ -60,6 +61,10 @@ const ROUTES: Routes = [
     {
         path: 'pie-chart',
         component: PieChartComponent
+    },
+    {
+        path: 'visual-effects',
+        component: VisualEffectsComponent
     }
 ]
 
@@ -76,7 +81,8 @@ const ROUTES: Routes = [
         ImgBordersComponent,
         FlexibleEllipsesComponent,
         ParallelogramsComponent,
-        PieChartComponent
+        PieChartComponent,
+        VisualEffectsComponent
     ],
     imports: [
         BrowserModule,
