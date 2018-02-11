@@ -18,3 +18,10 @@ div:not(:first-child) {
     background-color: orange;
     box-shadow: 3px 3px 6px -3px black;
 }
+
+.two-opposite-sided-shadow {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    box-shadow: 5px 0 5px -5px black, -5px 0 5px -5px black;
+}
