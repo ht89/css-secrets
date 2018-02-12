@@ -16,6 +16,7 @@ import { FlexibleEllipsesComponent } from './flexible-ellipses/flexible-ellipses
 import { ParallelogramsComponent } from './parallelograms/parallelograms.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { VisualEffectsComponent } from './visual-effects/visual-effects.component';
+import { ColorTintingComponent } from './color-tinting/color-tinting.component';
 
 const ROUTES: Routes = [
     {
@@ -65,6 +66,10 @@ const ROUTES: Routes = [
     {
         path: 'visual-effects',
         component: VisualEffectsComponent
+    },
+    {
+        path: 'color-tinting',
+        component: ColorTintingComponent
     }
 ]
 
@@ -82,7 +87,8 @@ const ROUTES: Routes = [
         FlexibleEllipsesComponent,
         ParallelogramsComponent,
         PieChartComponent,
-        VisualEffectsComponent
+        VisualEffectsComponent,
+        ColorTintingComponent
     ],
     imports: [
         BrowserModule,
