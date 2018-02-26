@@ -19,6 +19,7 @@ import { VisualEffectsComponent } from './visual-effects/visual-effects.componen
 import { ColorTintingComponent } from './color-tinting/color-tinting.component';
 import { FrostedGlassComponent } from './frosted-glass/frosted-glass.component';
 import { FoldedCornerComponent } from './folded-corner/folded-corner.component';
+import { TypographyComponent } from './typography/typography.component';
 
 const ROUTES: Routes = [
     {
@@ -80,6 +81,10 @@ const ROUTES: Routes = [
     {
         path: 'folded-corner',
         component: FoldedCornerComponent
+    },
+    {
+        path: 'typography',
+        component: TypographyComponent
     }
 ]
 
@@ -100,7 +105,8 @@ const ROUTES: Routes = [
         VisualEffectsComponent,
         ColorTintingComponent,
         FrostedGlassComponent,
-        FoldedCornerComponent
+        FoldedCornerComponent,
+        TypographyComponent
     ],
     imports: [
         BrowserModule,
