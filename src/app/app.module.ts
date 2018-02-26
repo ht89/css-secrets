@@ -17,6 +17,7 @@ import { ParallelogramsComponent } from './parallelograms/parallelograms.compone
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { VisualEffectsComponent } from './visual-effects/visual-effects.component';
 import { ColorTintingComponent } from './color-tinting/color-tinting.component';
+import { FrostedGlassComponent } from './frosted-glass/frosted-glass.component';
 
 const ROUTES: Routes = [
     {
@@ -70,6 +71,10 @@ const ROUTES: Routes = [
     {
         path: 'color-tinting',
         component: ColorTintingComponent
+    },
+    {
+        path: 'frosted-glass',
+        component: FrostedGlassComponent
     }
 ]
 
@@ -88,7 +93,8 @@ const ROUTES: Routes = [
         ParallelogramsComponent,
         PieChartComponent,
         VisualEffectsComponent,
-        ColorTintingComponent
+        ColorTintingComponent,
+        FrostedGlassComponent
     ],
     imports: [
         BrowserModule,
