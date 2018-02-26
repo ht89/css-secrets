@@ -13,3 +13,10 @@
     <dt>Location:</dt>
     <dd>Earth</dd>
 </dl>
+
+<div class="zebra-stripes">
+    var text_filter = $(this).val(); <br>
+    var tr = $('tr'); $("table").find("tbody").find("tr").hide(); <br>
+    $("table").find("td").show();<br>
+    $("table").find("tbody").find("tr:contains("+text_filter+")").show();<br>
+</div>
