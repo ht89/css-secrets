@@ -18,6 +18,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { VisualEffectsComponent } from './visual-effects/visual-effects.component';
 import { ColorTintingComponent } from './color-tinting/color-tinting.component';
 import { FrostedGlassComponent } from './frosted-glass/frosted-glass.component';
+import { FoldedCornerComponent } from './folded-corner/folded-corner.component';
 
 const ROUTES: Routes = [
     {
@@ -75,6 +76,10 @@ const ROUTES: Routes = [
     {
         path: 'frosted-glass',
         component: FrostedGlassComponent
+    },
+    {
+        path: 'folded-corner',
+        component: FoldedCornerComponent
     }
 ]
 
@@ -94,7 +99,8 @@ const ROUTES: Routes = [
         PieChartComponent,
         VisualEffectsComponent,
         ColorTintingComponent,
-        FrostedGlassComponent
+        FrostedGlassComponent,
+        FoldedCornerComponent
     ],
     imports: [
         BrowserModule,
