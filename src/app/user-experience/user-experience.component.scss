@@ -1,0 +1,50 @@
+button {
+    background: #58a;
+    color: #fff;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .3) inset, 0 .1em .2em -.05em rgba(0, 0, 0, .5);
+    position: relative;
+    &:before {
+        /* extend the clickable area */
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        bottom: -10px;
+        left: -10px;
+    }
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    & +label:before {
+        content: '\a0'; // no break space
+        display: inline-block;
+        vertical-align: .1em;
+        width: .8em;
+        height: .8em;
+        margin-right: .2em;
+        border-radius: .2em;
+        background: silver;
+        text-indent: .15em;
+        line-height: .65;
+    }
+    &:checked + label:before {
+        content: '\2713';
+        background: yellowgreen;
+    }
+    &:focus + label:before {
+        box-shadow: 0 0 .1em .1em #58a;
+    }
+    &:disabled + label:before {
+        background: gray;
+        box-shadow: none;
+        color: #555;
+    }
+}

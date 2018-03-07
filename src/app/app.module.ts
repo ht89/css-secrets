@@ -21,6 +21,7 @@ import { FrostedGlassComponent } from './frosted-glass/frosted-glass.component';
 import { FoldedCornerComponent } from './folded-corner/folded-corner.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TextEffectsComponent } from './text-effects/text-effects.component';
+import { UserExperienceComponent } from './user-experience/user-experience.component';
 
 const ROUTES: Routes = [
     {
@@ -90,6 +91,10 @@ const ROUTES: Routes = [
     {
         path: 'text-effects',
         component: TextEffectsComponent
+    },
+    {
+        path: 'user-experience',
+        component: UserExperienceComponent
     }
 ]
 
@@ -112,7 +117,8 @@ const ROUTES: Routes = [
         FrostedGlassComponent,
         FoldedCornerComponent,
         TypographyComponent,
-        TextEffectsComponent
+        TextEffectsComponent,
+        UserExperienceComponent
     ],
     imports: [
         BrowserModule,
