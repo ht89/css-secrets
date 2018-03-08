@@ -86,7 +86,7 @@ input[type="checkbox"] {
         + see the boundary of the overlay when scrolling unless the element has position: fixed or the page is not long enough for scrolling
         + cannot prevent users using the mouse to interact with the rest of the pages
     */
-    box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);
+    box-shadow: 0 0 0 50vmax rgba(0, 0, 0, .8);
 }
 
 main.de-emphasized {
@@ -102,4 +102,22 @@ dialog.visible {
     display: initial;
     position: absolute;
     top: 70%;
+}
+
+ul {
+    overflow: auto;
+    width: 10em;
+    height: 8em;
+    padding: .3em .5em;
+    border: 1px solid silver;
+    /* 
+        the linear-gradient acts as a mask that covers the radial-gradient when scrolling to the top &
+        shows the radial-gradient when scrolling down
+    */
+    background: linear-gradient(white, rgba(255, 255, 255, 0)) 0 0 / 100% 50px, 
+    radial-gradient(at top, rgba(0, 0, 0, .2), transparent 70%) 0 0 / 100% 15px, 
+    linear-gradient(to top, white, rgba(255, 255, 255, 0)) bottom / 100% 50px, 
+    radial-gradient(at bottom, rgba(0, 0, 0, .2), transparent 70%) bottom / 100% 15px;
+    background-repeat: no-repeat;
+    background-attachment: local, scroll, local, scroll; // local: applied at the top, scroll: applied when scrolling
 }
