@@ -69,10 +69,20 @@ input[type="checkbox"] {
         text-align: center;
         text-shadow: 0 1px 1px white;
     }
-    &:checked + label,
-    &:active + label {
-        box-shadow: .05em .1em .2em rgba(0,0,0,.6) inset;
-        border-color: rgba(0,0,0,.3);
+    &:checked+label,
+    &:active+label {
+        box-shadow: .05em .1em .2em rgba(0, 0, 0, .6) inset;
+        border-color: rgba(0, 0, 0, .3);
         background: #bbb;
     }
+}
+
+.overlay {
+    /* vmax = vw/vh , whichever is larger */
+    /* 50vmax on each side */
+    /* limitation:
+        + see the boundary of the overlay when scrolling unless the element has position: fixed or the page is not long enough for scrolling
+        + cannot prevent users using the mouse to interact with the rest of the pages
+    */
+    box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);
 }

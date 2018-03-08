@@ -9,3 +9,10 @@
     <input type="checkbox" id="awesome2">
     <label for="awesome2">Awesome!</label>
 </div>
+
+<button type="button" (click)="boxIsOpened = true">Open box</button>
+
+<div *ngIf="boxIsOpened" class="overlay">
+    <textarea name="box" id="box" cols="30" rows="10"></textarea>
+    <button type="button" (click)="boxIsOpened = false">x</button>
+</div>
