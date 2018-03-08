@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserExperienceComponent implements OnInit {
     boxIsOpened = false;
+    showDialog = false;
 
     constructor() { }
 

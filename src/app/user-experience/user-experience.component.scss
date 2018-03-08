@@ -1,9 +1,11 @@
 button {
+    display: block;
     background: #58a;
     color: #fff;
     border-radius: 50%;
     border: 0;
     padding: 0;
+    margin-top: 30px;
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -85,4 +87,19 @@ input[type="checkbox"] {
         + cannot prevent users using the mouse to interact with the rest of the pages
     */
     box-shadow: 0 0 0 50vmax rgba(0,0,0,.8);
+}
+
+main.de-emphasized {
+    // dimming using contrast & brightness does not provide a fallback. Use box-shadow above instead
+    filter: blur(3px) contrast(.8) brightness(.8);
+}
+
+main {
+    transition: .6 filter;
+}
+
+dialog.visible {
+    display: initial;
+    position: absolute;
+    top: 70%;
 }
