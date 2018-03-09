@@ -119,6 +119,7 @@ ul {
     background-attachment: local, scroll, local, scroll; // local: applied at the top, scroll: applied when scrolling
 }
 
+/* limitations: refer to page 254 for solution */
 .image-slider {
     position: relative;
     display: inline-block; // before image
