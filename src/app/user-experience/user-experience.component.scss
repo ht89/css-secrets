@@ -114,10 +114,40 @@ ul {
         the linear-gradient acts as a mask that covers the radial-gradient when scrolling to the top &
         shows the radial-gradient when scrolling down
     */
-    background: linear-gradient(white, rgba(255, 255, 255, 0)) 0 0 / 100% 50px, 
-    radial-gradient(at top, rgba(0, 0, 0, .2), transparent 70%) 0 0 / 100% 15px, 
-    linear-gradient(to top, white, rgba(255, 255, 255, 0)) bottom / 100% 50px, 
-    radial-gradient(at bottom, rgba(0, 0, 0, .2), transparent 70%) bottom / 100% 15px;
+    background: linear-gradient(white, rgba(255, 255, 255, 0)) 0 0 / 100% 50px, radial-gradient(at top, rgba(0, 0, 0, .2), transparent 70%) 0 0 / 100% 15px, linear-gradient(to top, white, rgba(255, 255, 255, 0)) bottom / 100% 50px, radial-gradient(at bottom, rgba(0, 0, 0, .2), transparent 70%) bottom / 100% 15px;
     background-repeat: no-repeat;
     background-attachment: local, scroll, local, scroll; // local: applied at the top, scroll: applied when scrolling
+}
+
+.image-slider {
+    position: relative;
+    display: inline-block; // before image
+    &>div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 50%; // initial width
+        overflow: hidden;
+        resize: horizontal; // can be vertical. this is disabled by default.
+        max-width: 100%; // ensure the before image cannot be dragged outside the container
+        /* overlay on top of the resize handler at the bottom right corner of before image */
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            cursor: ew-resize;
+            /* display the triangle as the resize handler */
+            padding: 6px;
+            background: linear-gradient(-45deg, white 50%, transparent 0);
+            background-clip: content-box;
+        }
+    }
+    img {
+        display: block;
+        user-select: none; // prevent the images being pointlessly selected when failing to grab the resize handler
+    }
 }
