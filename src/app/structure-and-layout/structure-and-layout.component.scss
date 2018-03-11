@@ -1,0 +1,12 @@
+figure {
+    border: 1px solid gray;
+    /* 
+        other values: max-content & fit-content
+            + max-content: same as using display: inline-block
+            + fit-content: same as using float: left
+        
+        check fallback for older browsers on 265
+    */
+    width: min-content;
+    margin: auto;
+}

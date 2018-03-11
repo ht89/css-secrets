@@ -22,6 +22,7 @@ import { FoldedCornerComponent } from './folded-corner/folded-corner.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TextEffectsComponent } from './text-effects/text-effects.component';
 import { UserExperienceComponent } from './user-experience/user-experience.component';
+import { StructureAndLayoutComponent } from './structure-and-layout/structure-and-layout.component';
 
 const ROUTES: Routes = [
     {
@@ -95,6 +96,10 @@ const ROUTES: Routes = [
     {
         path: 'user-experience',
         component: UserExperienceComponent
+    },
+    {
+        path: 'structure-and-layout',
+        component: StructureAndLayoutComponent
     }
 ]
 
@@ -118,7 +123,8 @@ const ROUTES: Routes = [
         FoldedCornerComponent,
         TypographyComponent,
         TextEffectsComponent,
-        UserExperienceComponent
+        UserExperienceComponent,
+        StructureAndLayoutComponent
     ],
     imports: [
         BrowserModule,
