@@ -23,6 +23,8 @@ import { TypographyComponent } from './typography/typography.component';
 import { TextEffectsComponent } from './text-effects/text-effects.component';
 import { UserExperienceComponent } from './user-experience/user-experience.component';
 import { StructureAndLayoutComponent } from './structure-and-layout/structure-and-layout.component';
+import { StickyFooterComponent } from './sticky-footer/sticky-footer.component';
+import { AnimationsComponent } from './animations/animations.component';
 
 const ROUTES: Routes = [
     {
@@ -100,6 +102,14 @@ const ROUTES: Routes = [
     {
         path: 'structure-and-layout',
         component: StructureAndLayoutComponent
+    },
+    {
+        path: 'sticky-footer',
+        component: StickyFooterComponent
+    },
+    {
+        path: 'animations',
+        component: AnimationsComponent
     }
 ]
 
@@ -124,7 +134,9 @@ const ROUTES: Routes = [
         TypographyComponent,
         TextEffectsComponent,
         UserExperienceComponent,
-        StructureAndLayoutComponent
+        StructureAndLayoutComponent,
+        StickyFooterComponent,
+        AnimationsComponent
     ],
     imports: [
         BrowserModule,
