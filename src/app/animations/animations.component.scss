@@ -87,7 +87,7 @@ input[type="text"]:not(:focus)+.callout {
 
 .highlight {
     // animation-direction values: normal (default), reverse, alternate, alternate-reverse
-    animation: .5s blink-smooth 6 alternate; 
+    animation: .5s blink-smooth 6 alternate;
     display: inline-block;
 }
 
@@ -111,4 +111,25 @@ h1 {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
+}
+
+@keyframes panoramic {
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.panoramic {
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 150px;
+    height: 150px;
+    background: url('../../assets/img/tiger.jpg');
+    background-size: auto 100%;
+    animation: panoramic 10s linear infinite alternate;
+    animation-play-state: paused; // pause animation until a user action
+    &:hover,
+    &:focus {
+        animation-play-state: running;
+    }
 }
