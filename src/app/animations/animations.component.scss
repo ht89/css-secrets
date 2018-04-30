@@ -90,3 +90,25 @@ input[type="text"]:not(:focus)+.callout {
     animation: .5s blink-smooth 6 alternate; 
     display: inline-block;
 }
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes caret {
+    50% {
+        border-color: black;
+    }
+}
+
+h1 {
+    width: 15ch; // 1ch = 1 monospace font character
+    animation: typing 6s steps(15), caret 1s steps(1) infinite;
+    font-family: monospace;
+    border-right: .05em solid transparent;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
