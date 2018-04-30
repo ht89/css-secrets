@@ -78,3 +78,15 @@ input[type="text"]:not(:focus)+.callout {
     white-space: nowrap;
     overflow: hidden;
 }
+
+@keyframes blink-smooth {
+    to {
+        color: transparent;
+    }
+}
+
+.highlight {
+    // animation-direction values: normal (default), reverse, alternate, alternate-reverse
+    animation: .5s blink-smooth 6 alternate; 
+    display: inline-block;
+}
