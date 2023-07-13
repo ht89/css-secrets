@@ -1,0 +1,23 @@
+div {
+    margin-top: 30px;
+}
+
+.ellipse {
+    background-color: #fb3;
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    &--quarter {
+        border-radius: 100% 0 0 0;
+    }
+}
+
+.half-ellipse {
+    background-color: #fb3;
+    width: 200px;
+    height: 150px;
+    border-radius: 50% / 100% 100% 0 0;
+    &--horizontal {
+        border-radius: 100% 0 0 100% / 50%;
+    }
+}

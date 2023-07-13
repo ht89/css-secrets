@@ -1,0 +1,46 @@
+.hyphens {
+    width: 250px;
+    hyphens: auto; // not working in Chrome
+}
+
+dd {
+    margin: 0;
+    font-weight: bold;
+}
+
+dd+dt {
+    &:before {
+        content: '\A'; // line break character
+        white-space: pre;
+    }
+}
+
+dt,
+dd {
+    display: inline;
+}
+
+dd+dd:before {
+    content: ', ';
+    font-weight: normal;
+}
+
+.zebra-stripes {
+    padding: .5rem;
+    line-height: 1.5;
+    background-color: beige;
+    background-image: linear-gradient(rgba(0, 0, 0, .2) 50%, transparent 0);
+    background-size: auto 3rem;
+    /* tell the background image to start after the padding box edge. The default is padding box edge */
+    background-origin: content-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: default;
+    background: linear-gradient(90deg, gray 66%, transparent 0) repeat-x;
+    background-size: 10px 2px;
+    background-position: 0 30px;
+    text-shadow: .05rem 0 white, -.05rem 0 white; // cut the underlines at the descenders
+}

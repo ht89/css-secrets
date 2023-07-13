@@ -1,0 +1,36 @@
+.something-meaningful {
+    width: 300px;
+    padding: 1rem;
+    border: 1rem solid transparent;
+    background: linear-gradient(white, white), url('../../assets/img/img.png');
+    background-size: cover;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+}
+
+.envelope-themed-border {
+    margin-top: 30px;
+    padding: 1rem;
+    border: 1rem solid transparent;
+    background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 0, transparent 25%, #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0 / 5rem 5rem;
+}
+
+.marching-ants {
+    margin-top: 30px;
+    padding: 1rem;
+    border: 1px solid transparent;
+    background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0 / .6rem .6rem;
+    animation: ants 12s linear infinite;
+}
+
+@keyframes ants {
+    to {
+        background-position: 100%;
+    }
+}
+
+.footnote {
+    margin-top: 30px;
+    border-top: 5px solid transparent;
+    border-image: 100% 0 0 linear-gradient(90deg, black 4rem, transparent 0);
+}

@@ -1,0 +1,38 @@
+div:not(:first-child) {
+    margin-top: 30px;
+}
+
+.one-sided-shadow {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    /* 
+        if the blur radius equals the spread radius, they will cancel each other out and therefore, the shadow dimensions equals the element dimensions
+    */
+    box-shadow: 0 5px 4px -4px black;
+}
+
+.two-adjacent-sided-shadow {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    box-shadow: 3px 3px 6px -3px black;
+}
+
+.two-opposite-sided-shadow {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    box-shadow: 5px 0 5px -5px black, -5px 0 5px -5px black;
+}
+
+.dashed-border {
+    width: 100px;
+    height: 100px;
+    border: 5px orange dashed;
+    /* 
+        use this so that the shadow follows the border pattern
+        drop-shadow() does not allow spread radius
+    */
+    filter: drop-shadow(2px 2px 2px black);
+}

@@ -1,0 +1,10 @@
+.sth-meaningful {
+    width: 300px;
+    margin-top: 45px;
+    background: tan;
+    border-radius: .8rem;
+    padding: 1rem; // the min spread radius should be `border radius * (sqrt(2) - 1)` or half the border radius to avoid artifacts in some browsers
+    // NOTE: outline cannot be smaller than `border radius * (sqrt(2) - 1)`
+    box-shadow: 0 0 0 .4rem #655;
+    outline: .6rem solid #655;
+}

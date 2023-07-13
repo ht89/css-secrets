@@ -1,0 +1,77 @@
+figure {
+    border: 1px solid gray;
+    /* 
+        other values: max-content & fit-content
+            + max-content: same as using display: inline-block
+            + fit-content: same as using float: left
+        
+        check fallback for older browsers on 265
+    */
+    width: min-content;
+    margin: auto;
+}
+
+footer {
+    background: #333;
+    color: #fff; // max-width: 900px; // use this if the result of calc() is less/more than 900px
+    padding: 1em; // fallback
+    padding: 1em calc(50% - 450px); // similar to auto which is 50% of viewport width - content width
+    /* use media queries when there are no paddings because the screen gets narrower than the content width */
+}
+
+div.container {
+    position: relative;
+    height: 500px;
+    background: yellow;
+    margin-top: 30px;
+    main {
+        background: brown;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* 
+        CSS transforms move the element relative to its own width & height unlike CSS properties like margins, paddings, percentages are relative to the dimensions of the parent of the element
+
+        caveats: page 282
+    */
+        transform: translate(-50%, -50%);
+        h1,
+        p {
+            margin: 0;
+        }
+    }
+}
+
+
+/* another way */
+
+div.container2 {
+    height: 500px;
+    background: yellow;
+    display: flex;
+    margin-top: 30px;
+    main {
+        background: brown;
+        margin: auto;
+        h1,
+        p {
+            margin: 0;
+        }
+    }
+}
+
+/* vertically center text without wrapper */
+div.container3 {
+    height: 500px;
+    background: yellow;
+    display: flex;
+    margin-top: 30px;
+    main {
+        background: brown;
+        margin: auto;
+        h1,
+        p {
+            margin: 0;
+        }
+    }
+}

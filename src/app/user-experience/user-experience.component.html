@@ -1,0 +1,52 @@
+<button>+</button>
+
+<div class="custom-checkbox">
+    <input type="checkbox" id="awesome">
+    <label for="awesome">Awesome!</label>
+</div>
+
+<div class="toggle">
+    <input type="checkbox" id="awesome2">
+    <label for="awesome2">Awesome!</label>
+</div>
+
+<button type="button" (click)="boxIsOpened = true">Open box</button>
+
+<div *ngIf="boxIsOpened" class="overlay">
+    <textarea name="box" id="box" cols="30" rows="10"></textarea>
+    <button type="button" (click)="boxIsOpened = false">x</button>
+</div>
+
+<button type="button" (click)="showDialog = !showDialog">{{ showDialog ? 'Hide dialog' : 'Show dialog' }}</button>
+
+<main [ngClass]="{ 'de-emphasized': showDialog }">Vestibulum ullamcorper mauris at ligula. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas
+quam mauris ut lacus. Vestibulum ullamcorper mauris at ligula. Nam commodo suscipit quam. Pellentesque commodo eros a enim.
+Nulla sit amet est. Fusce pharetra convallis urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Fusce fermentum.
+Praesent turpis. Suspendisse potenti. Nullam sagittis. Phasellus blandit leo ut odio. Pellentesque dapibus hendrerit tortor.
+Nullam vel sem. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non
+est. Donec venenatis vulputate lorem. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Donec id justo. Morbi
+mollis tellus ac sapien. Praesent ac sem eget est egestas volutpat. Curabitur ullamcorper ultricies nisi. Sed in libero ut
+nibh placerat accumsan. Vestibulum ullamcorper mauris at ligula. Pellentesque dapibus hendrerit tortor.</main>
+
+<dialog [ngClass]="{ 'visible': showDialog }">I'm a dialog. Click on me to dismiss</dialog>
+
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+</ul>
+
+<div class="image-slider">
+    <!-- put the resizable image inside a div to not distort it when resizing -->
+    <div>
+        <img src="assets/img/adamcatlace-before.jpg" alt="Before Img">
+    </div>
+    <img src="assets/img/adamcatlace.jpg" alt="After Img">
+</div>

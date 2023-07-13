@@ -1,0 +1,13 @@
+.bg-position {
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    background: #5C9ABE url('http://csssecrets.io/images/code-pirate.svg') no-repeat bottom right;
+    // ensure the background image position is relative to the edge of the content box (relative to padding box by default)
+    background-origin: content-box;
+    background-size: 100px;
+    > div {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+}

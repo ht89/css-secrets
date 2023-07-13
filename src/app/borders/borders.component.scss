@@ -1,0 +1,45 @@
+.image {
+    background-image: url('../../assets/img/wall.png');
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 700px;
+    position: relative;
+    &__inner {
+        background: white;
+        border: 15px solid hsla(0, 0%, 100%, .5);
+        background-clip: padding-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: .5rem .7rem;
+    }
+}
+
+.multi-borders {
+    margin: 50px;
+    background: yellowgreen;
+    box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink, 0 2px 5px 15px rgba(0, 0, 0, .6);
+    height: 200px;
+    width: 300px;
+}
+
+.outline-multi-borders {
+    margin: 50px;
+    background: yellowgreen;
+    height: 200px;
+    width: 300px;
+    border: 10px solid #655;
+    outline: 15px solid deeppink;
+}
+
+.stiching-effect {
+    margin: 50px;
+    background: #705B5A;
+    height: 200px;
+    width: 300px;
+    outline: 2px dashed #fff;
+    border-radius: 10px;
+    outline-offset: -20px;
+}
